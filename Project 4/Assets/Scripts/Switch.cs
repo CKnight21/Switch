@@ -5,9 +5,11 @@ using UnityEngine;
 public class Switch : MonoBehaviour
 {
     [SerializeField]
-    public GameObject door;
+    public GameObject thingToSwtich;
 
     bool isOn;
+
+   
 
     void OnTriggerEnter(Collider collider)
     {
@@ -16,7 +18,9 @@ public class Switch : MonoBehaviour
         if(isOn == true)
         {
             isOn = true;
-            door.SetActive(true);
+            thingToSwtich.SetActive(true);
+            gameObject.GetComponent<AudioSource>().Play();
+            gameObject.GetComponent<Animator>().Play("SwitchOn");
             return;
         }
     }
@@ -28,7 +32,9 @@ public class Switch : MonoBehaviour
         if (isOn == false)
         {
             isOn = false;
-            door.SetActive(false);
+            thingToSwtich.SetActive(false);
+            gameObject.GetComponent<AudioSource>().Play();
+            gameObject.GetComponent<Animator>().Play("SwitchOff");
             Debug.Log("Door invisable");
             return;
         }
