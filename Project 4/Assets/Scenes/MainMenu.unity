@@ -2255,18 +2255,21 @@ MonoBehaviour:
   m_text: 'Instructions:
 
 
-    Press "E" To pick up boxes
+    Press "E" To pick up/drop boxes
 
 
-    Move around with
-    "WASD"
+    Move around
+    with "WASD"
+
+
+    Jump with "SpaceBar"
 
 
     Step on switches to activate doors
 
 
-    Press "Esc" to bring up
-    the Menu
+    Press
+    "Esc" to bring up the Menu
 
 
     Boxes can go on Swtiches'
